@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>System Wake Lock Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Manifest -->
+    <meta name="theme-color" content="#4a148c">
+  </head>  
+  <body>
+    <h1>
+      <a href="/">Wake Lock Demo</a>
+    </h1>
+    
+    <p id="requireHTTPS" class="hidden">
+      <b>STOP!</b> This page <b>must</b> be served over HTTPS.
+      Please <a>reload this page via HTTPS</a>.
+    </p>
+    
+    <p>
+      TODO: what is wakelock
+    </p>
+      
+    <p id="notSupported" class="hidden">
+      TODO: <code>wakelock</code> is not supported.
+    </p>
+    
+    <p id="status">
+      <b><span id="wlKind"></span> Wake Lock Status</b><br>
+      <button id="butToggle" type="button" disabled>
+        Start
+      </button>
+      <b>active:</b> <span id="wlActive">not created.</span><br>
+      <b>type:</b> <span id="wlType"></span><br>
+      <b>Active for:</b> <span id="wlDuration">N/A</span> seconds
+    </p>
+    
+    <p>
+      Check out the <a href="https://glitch.com/edit/#!/wake-lock">source</a>
+      for this sample, or
+      <a href="https://glitch.com/edit/#!/remix/wake-lock">remix it</a> on Glitch.
+    </p>
+    
+
+    <!-- import the webpage's javascript file -->
+    <script>
+      const wlKind = 'system';
+    </script>
+    <script src="/wakelock.js"></script>
+  </body>
+</html>
